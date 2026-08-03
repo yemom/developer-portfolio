@@ -1,0 +1,63 @@
+@import "./_globalColor";
+
+/* ---- App Root ---- */
+.App {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* ---- Light Mode Background ---- */
+.App,
+body {
+  background-color: $lightBackground1;
+  color: $textColor;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ---- Dark Mode Root ---- */
+.dark-mode,
+.dark-mode body {
+  background-color: $darkBackground;
+  color: $textColorDark;
+}
+
+/* ---- Dark mode override for light-mode-specific classes ---- */
+.dark-mode .subTitle {
+  color: rgba(230, 237, 243, 0.7) !important;
+}
+
+/* ---- Shared subTitle utility (used across components) ---- */
+.subTitle {
+  color: $subTitle;
+}
+
+/* ---- Dark mode text override used across many components ---- */
+.dark-mode-text {
+  color: $textColorDark !important;
+}
+
+/* ---- Section common container ---- */
+.main {
+  width: 90%;
+  max-width: 1200px;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+
+/* ---- App link ---- */
+.App-link {
+  color: $appLink;
+}
+
+/* ---- Headings utility ---- */
+.heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: $titleColor;
+  line-height: 1.2;
+}
+
+.dark-mode .heading {
+  color: $textColorDark;
+}

@@ -1,0 +1,135 @@
+@import "../../_globalColor";
+
+.education-card {
+  @include glass-card-light;
+  display: flex;
+  gap: 24px;
+  padding: 30px;
+  border-radius: $radius-lg;
+  margin-bottom: 30px;
+  transition: transform $transition-base, box-shadow $transition-base;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $shadow-card-hover-light;
+    border-color: rgba(108, 99, 255, 0.3);
+  }
+
+  .education-section--dark & {
+    @include glass-card-dark;
+
+    &:hover {
+      box-shadow: $shadow-card-hover-dark;
+    }
+  }
+}
+
+.education-card-left {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgba(108, 99, 255, 0.2);
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.education-card-right {
+  flex: 1;
+}
+
+.education-text-school {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: $titleColor;
+  margin: 0 0 6px;
+
+  .education-section--dark & {
+    color: $textColorDark;
+  }
+}
+
+.education-text-subHeader {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: $primary;
+  margin: 0 0 4px;
+
+  .education-section--dark & {
+    color: $primary-light;
+  }
+}
+
+.education-text-duration {
+  font-size: 0.9rem;
+  color: $subTitle;
+  margin: 0 0 16px;
+
+  .education-section--dark & {
+    color: rgba(230, 237, 243, 0.6);
+  }
+}
+
+.education-text-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: $textColor;
+  margin: 0 0 16px;
+
+  .education-section--dark & {
+    color: rgba(230, 237, 243, 0.8);
+  }
+}
+
+.education-text-bullets {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: $subTitle;
+
+      .education-section--dark & {
+        color: rgba(230, 237, 243, 0.7);
+      }
+
+      &::before {
+        content: '▹';
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: $primary;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .education-card {
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+  }
+
+  .education-card-left {
+    width: 60px;
+    height: 60px;
+  }
+}

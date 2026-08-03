@@ -1,0 +1,236 @@
+@import "../../_globalColor";
+
+/* ================================================================
+   BUTTON COMPONENT STYLES
+   Variants: primary | secondary | outline | ghost
+   Sizes:    sm | md | lg
+   ================================================================ */
+
+/* ---- Base Button ---- */
+.btn {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: "Inter", "Montserrat", sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: $radius-full;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  transition: transform $transition-base,
+    box-shadow $transition-base,
+    background-color $transition-base,
+    border-color $transition-base,
+    color $transition-base,
+    opacity $transition-base;
+  -webkit-tap-highlight-color: transparent;
+
+  &:focus-visible {
+    outline: 2px solid $primary;
+    outline-offset: 3px;
+  }
+
+  &:active:not(.btn-disabled):not(.btn-loading) {
+    transform: scale(0.97);
+  }
+}
+
+/* ---- Sizes ---- */
+.btn-sm {
+  padding: 8px 18px;
+  font-size: 0.8rem;
+  letter-spacing: 0.3px;
+}
+
+.btn-md {
+  padding: 13px 28px;
+  font-size: 0.9rem;
+  letter-spacing: 0.4px;
+}
+
+.btn-lg {
+  padding: 16px 36px;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+/* ---- Primary (Gradient) ---- */
+.btn-primary {
+  background: $gradient-primary;
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 4px 20px rgba(108, 99, 255, 0.35);
+
+  &:hover:not(.btn-disabled):not(.btn-loading) {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 32px rgba(108, 99, 255, 0.5);
+    background: linear-gradient(135deg, $primary-dark 0%, #2563eb 100%);
+  }
+}
+
+/* ---- Secondary (Teal gradient) ---- */
+.btn-secondary {
+  background: $gradient-secondary;
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 4px 20px rgba(0, 212, 170, 0.3);
+
+  &:hover:not(.btn-disabled):not(.btn-loading) {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 32px rgba(0, 212, 170, 0.45);
+    filter: brightness(1.08);
+  }
+}
+
+/* ---- Outline ---- */
+.btn-outline {
+  background: transparent;
+  color: $primary;
+  border-color: $primary;
+
+  &:hover:not(.btn-disabled):not(.btn-loading) {
+    background: $primary;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 28px rgba(108, 99, 255, 0.35);
+  }
+}
+
+/* ---- Ghost ---- */
+.btn-ghost {
+  background: transparent;
+  color: $textColor;
+  border-color: transparent;
+
+  &:hover:not(.btn-disabled):not(.btn-loading) {
+    background: rgba(108, 99, 255, 0.08);
+    color: $primary;
+    border-color: rgba(108, 99, 255, 0.15);
+  }
+}
+
+/* ---- Dark Mode Overrides ---- */
+.dark-mode .btn-outline {
+  color: $primary-light;
+  border-color: $primary-light;
+
+  &:hover:not(.btn-disabled):not(.btn-loading) {
+    background: $primary;
+    color: #ffffff;
+  }
+}
+
+.dark-mode .btn-ghost {
+  color: $textColorDark;
+
+  &:hover:not(.btn-disabled):not(.btn-loading) {
+    background: rgba(108, 99, 255, 0.15);
+    color: $primary-light;
+  }
+}
+
+/* ---- Disabled State ---- */
+.btn-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ---- Loading State ---- */
+.btn-loading {
+  cursor: wait;
+  pointer-events: none;
+}
+
+.btn-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: btn-spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes btn-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---- Icons ---- */
+.btn-icon {
+  font-size: 0.9em;
+  line-height: 1;
+  transition: transform $transition-fast;
+}
+
+.btn:hover .btn-icon-right {
+  transform: translateX(3px);
+}
+
+.btn:hover .btn-icon-left {
+  transform: translateX(-2px);
+}
+
+/* ---- Ripple Effect ---- */
+.btn-ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(0);
+  animation: btn-ripple-anim 0.6s linear;
+  pointer-events: none;
+}
+
+@keyframes btn-ripple-anim {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .btn-md {
+    padding: 11px 22px;
+    font-size: 0.85rem;
+  }
+
+  .btn-lg {
+    padding: 13px 28px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-sm {
+    padding: 8px 14px;
+    font-size: 0.78rem;
+  }
+
+  .btn-md {
+    padding: 10px 18px;
+    font-size: 0.82rem;
+  }
+}
+
+/* ---- Legacy compatibility: existing .main-button class ---- */
+/* Components that still use the old class name will still work */
+.main-button {
+  @extend .btn;
+  @extend .btn-primary;
+  @extend .btn-md;
+  display: inline-flex;
+  margin-right: 0;
+}
+
+/* Override for old download-link-button */
+.download-link-button {
+  text-decoration: none;
+}

@@ -1,0 +1,331 @@
+@import "../../_globalColor";
+
+/* ================================================================
+   SKILLS SECTION
+   ================================================================ */
+
+.skills-section {
+  padding: 80px 0;
+  position: relative;
+
+  &--dark {
+    .skill-card {
+      @include glass-card-dark;
+    }
+
+    .skills-section__progress-title {
+      color: $textColorDark;
+    }
+
+    .progress-bar__label,
+    .progress-bar__percent {
+      color: $textColorDark;
+    }
+
+    .progress-bar__track {
+      background: $surface-dark-3;
+    }
+
+    .skills-section__bullet {
+      color: rgba(230, 237, 243, 0.7);
+    }
+
+    .skill-icon {
+      background: $surface-dark-3;
+      color: $textColorDark;
+
+      &:hover {
+        background: rgba(108, 99, 255, 0.15);
+        border-color: $glass-border-dark;
+      }
+    }
+
+    .skill-icon__name {
+      color: rgba(230, 237, 243, 0.6);
+    }
+  }
+}
+
+.skills-section__container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ---- What I Do Intro (Lottie + Bullets) ---- */
+.skills-section__intro {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 48px;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.skills-section__lottie {
+  flex: 1;
+  max-width: 500px;
+  width: 100%;
+}
+
+.skills-section__bullets {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 12px;
+
+  @media (max-width: 900px) {
+    justify-content: center;
+  }
+}
+
+.skills-section__bullet {
+  font-size: 0.9rem;
+  color: $subTitle;
+  padding: 6px 16px;
+  border-radius: $radius-full;
+  background: rgba(108, 99, 255, 0.06);
+  border: 1px solid rgba(108, 99, 255, 0.12);
+  transition: all $transition-base;
+
+  &:hover {
+    background: rgba(108, 99, 255, 0.12);
+    border-color: rgba(108, 99, 255, 0.25);
+    transform: translateY(-2px);
+  }
+}
+
+/* ---- Category Cards Grid ---- */
+.skills-section__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 56px;
+}
+
+.skill-card {
+  position: relative;
+  overflow: hidden;
+  @include glass-card-light;
+  border-radius: $radius-lg;
+  padding: 28px 24px 24px;
+  transition: transform $transition-base, box-shadow $transition-base, border-color $transition-base;
+  cursor: default;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: $shadow-card-hover-light;
+    border-color: rgba(108, 99, 255, 0.3);
+  }
+
+  .skills-section--dark &:hover {
+    box-shadow: $shadow-card-hover-dark;
+  }
+}
+
+.skill-card__accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+}
+
+.skill-card__header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.skill-card__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: $radius-md;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  transition: transform $transition-base;
+
+  .skill-card:hover & {
+    transform: scale(1.1);
+  }
+}
+
+.skill-card__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: $titleColor;
+  margin: 0;
+
+  .skills-section--dark & {
+    color: $textColorDark;
+  }
+}
+
+.skill-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-card__tag {
+  display: inline-block;
+  padding: 4px 12px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  border-radius: $radius-full;
+  border: 1px solid;
+  background: transparent;
+  transition: all $transition-base;
+
+  .skill-card:hover & {
+    transform: translateY(-1px);
+  }
+}
+
+/* ---- Core Strengths Progress Bars ---- */
+.skills-section__progress {
+  max-width: 680px;
+  margin: 0 auto 56px;
+}
+
+.skills-section__progress-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: $titleColor;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.skills-section__bars {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.progress-bar__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.progress-bar__label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: $textColor;
+}
+
+.progress-bar__percent {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: $primary;
+}
+
+.progress-bar__track {
+  width: 100%;
+  height: 8px;
+  background: $progressBarBackground;
+  border-radius: $radius-full;
+  overflow: hidden;
+}
+
+.progress-bar__fill {
+  height: 100%;
+  background: $gradient-primary;
+  border-radius: $radius-full;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    background: white;
+    border: 3px solid $primary;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(108, 99, 255, 0.4);
+  }
+}
+
+/* ---- Software Skill Icons ---- */
+.skills-section__icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.skill-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 14px 12px;
+  border-radius: $radius-md;
+  background: rgba(108, 99, 255, 0.04);
+  border: 1px solid transparent;
+  transition: all $transition-base;
+  min-width: 72px;
+  cursor: default;
+
+  i {
+    font-size: 1.6rem;
+    color: $primary;
+    transition: transform $transition-base;
+  }
+
+  &:hover {
+    background: rgba(108, 99, 255, 0.1);
+    border-color: rgba(108, 99, 255, 0.2);
+    transform: translateY(-4px);
+
+    i {
+      transform: scale(1.15);
+    }
+  }
+}
+
+.skill-icon__name {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: $subTitle;
+  text-align: center;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1024px) {
+  .skills-section__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .skills-section {
+    padding: 60px 0;
+  }
+
+  .skills-section__grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .skill-card {
+    padding: 24px 20px;
+  }
+
+  .skills-section__bullets {
+    flex-direction: column;
+    align-items: center;
+  }
+}

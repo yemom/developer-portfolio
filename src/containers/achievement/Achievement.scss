@@ -1,0 +1,23 @@
+@import "../../_globalColor";
+
+.achievement-section {
+  padding: 80px 0;
+}
+
+.achievement-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.achievement-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+@media (max-width: 768px) {
+  .achievement-section {
+    padding: 60px 0;
+  }
+}

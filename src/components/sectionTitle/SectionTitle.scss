@@ -1,0 +1,118 @@
+@import "../../_globalColor";
+
+/* ================================================================
+   SECTION TITLE COMPONENT
+   ================================================================ */
+
+.section-title {
+  margin-bottom: 56px;
+
+  // Alignment variants
+  &--center {
+    text-align: center;
+
+    .section-title__line {
+      margin: 16px auto 0;
+    }
+
+    .section-title__subtitle {
+      max-width: 640px;
+      margin: 12px auto 0;
+    }
+  }
+
+  &--right {
+    text-align: right;
+
+    .section-title__line {
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+
+  &--left {
+    text-align: left;
+  }
+}
+
+/* ---- Badge ---- */
+.section-title__badge {
+  display: inline-block;
+  padding: 4px 14px;
+  background: rgba(108, 99, 255, 0.12);
+  color: $primary;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: $radius-full;
+  border: 1px solid rgba(108, 99, 255, 0.2);
+  margin-bottom: 12px;
+
+  .section-title--dark & {
+    background: rgba(108, 99, 255, 0.18);
+    color: $primary-light;
+    border-color: rgba(108, 99, 255, 0.3);
+  }
+}
+
+/* ---- Heading ---- */
+.section-title__heading {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: $titleColor;
+  letter-spacing: -0.5px;
+  margin: 0 0 4px;
+
+  // Gradient text effect on first word using :first-line trick
+  // We apply gradient to the heading container instead
+  background: linear-gradient(135deg, #1a1a2e 0%, #4a4a8a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  .section-title--dark & {
+    background: linear-gradient(135deg, #e6edf3 0%, #8b83ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* ---- Subtitle ---- */
+.section-title__subtitle {
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  line-height: 1.7;
+  color: $subTitle;
+  margin: 12px 0 0;
+  max-width: 580px;
+
+  .section-title--dark & {
+    color: rgba(230, 237, 243, 0.6);
+  }
+}
+
+/* ---- Decorative Gradient Line ---- */
+.section-title__line {
+  width: 60px;
+  height: 4px;
+  background: $gradient-primary;
+  border-radius: $radius-full;
+  margin-top: 16px;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .section-title {
+    margin-bottom: 40px;
+  }
+
+  .section-title__heading {
+    font-size: clamp(1.6rem, 6vw, 2.2rem);
+  }
+
+  .section-title__subtitle {
+    font-size: 0.95rem;
+  }
+}

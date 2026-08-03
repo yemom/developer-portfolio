@@ -1,0 +1,203 @@
+/* ========================================================
+   GLOBAL COLOR SYSTEM
+   All SCSS color variables for the entire portfolio.
+   Existing variable names are preserved — nothing breaks.
+   ======================================================== */
+
+// ---- Core Brand Colors ----
+$primary: #6c63ff;
+$primary-dark: #5548e8;
+$primary-light: #8b83ff;
+$secondary: #00d4aa;
+$accent: #ff6584;
+
+// ---- Button Colors (existing, preserved) ----
+$buttonColor: #6c63ff;
+$buttonHover: #5548e8;
+$topButtonHover: #000;
+
+// ---- Text Colors — Light Theme (existing, preserved) ----
+$titleColor: #0d1117;
+$textColor: #1a1a2e;
+$subTitle: #6b7280;
+$cardSubtitle: #6b7280;
+$talkCardSubTitle: #7f8287;
+$blogCardTitleColor: #262626;
+
+// ---- Text Colors — Dark Theme (existing, preserved) ----
+$textColorDark: #e6edf3;
+
+// ---- Toggle Switch Colors (existing, preserved) ----
+$toggleCheck: #6c63ff;
+$toggleSwitchSliderBG: #374151;
+
+// ---- GitHub Repo Card Colors (existing, preserved) ----
+$githubRepoCardLanguageColorBG: #6c63ff;
+$githubRepoCardColor: rgb(88, 96, 105);
+$githubRepoCardRepoCardStatsColor: rgb(106, 115, 125);
+$githubRepoCardRepoNameColor: rgb(36, 41, 46);
+$githubProfileCardLocationTS: #ffebcd;
+$githubProfileCardBorder: #6c63ff;
+
+// ---- Light Background Colors (existing, preserved) ----
+$lightBackground1: #ffffff;
+$lightBackground2: #ffffff;
+$lightBackground3: #f8f9ff;
+$blogCardContainerColor: #586069;
+
+// ---- Dark Background Colors (existing, preserved) ----
+$darkBackground: #0d1117;
+
+// ---- Light Theme Shadows (existing, preserved) ----
+$lightBoxShadowDark: rgba(0, 0, 0, 0.15);
+$lightBoxShadow: rgba(0, 0, 0, 0.07);
+$lightBoxShadowDarker: rgba(0, 0, 0, 0.2);
+
+// ---- Dark Theme Shadows (existing, preserved) ----
+$darkBoxShadow: #30363d;
+$darkBoxShadow2: #ffffff;
+
+// ---- Linear Gradients (existing, preserved) ----
+$experienceCardBlurredDivLG: linear-gradient(
+  rgba(0, 0, 0, 0.4),
+  rgba(0, 0, 0, 0.2)
+);
+$experienceCardBannerLG: linear-gradient(
+  rgba(0, 0, 0, 0.7),
+  rgba(0, 0, 0, 0.5)
+);
+
+// ---- Borders (existing, preserved) ----
+$progressBarBackground: #f0eeff;
+$lightBorder1: rgba(108, 99, 255, 0.15);
+$educationCardBorder: #6c63ff;
+
+// ---- Hover Colors (existing, preserved) ----
+$achievementCertificateCardHoverDark: rgba(255, 255, 255, 0.08);
+$blogCardHoverSmallColor: rgba(255, 255, 255, 0.8);
+$headerHoverBG: rgba(108, 99, 255, 0.08);
+$contactDetailHoverTS: #6c63ff;
+
+// ---- Misc Backgrounds (existing, preserved) ----
+$progressBarSpanBG: linear-gradient(90deg, #6c63ff, #3b82f6);
+$iconBackground: #4b5563;
+$appHeaderBG: #0d1117;
+
+// ---- Misc Colors (existing, preserved) ----
+$skillsColor: #6c63ff;
+$appLink: #00d4aa;
+
+// ---- Social Media Colors (existing, preserved) ----
+$faceBook: #3b5998;
+$linkedin: #0e76a8;
+$github: #333;
+$gitlab: #fca326;
+$google: #ea4335;
+$twitter: #1da1f2;
+$medium: #000;
+$stackoverflow: #f48024;
+$instagram: #c13584;
+$kaggle: #20beff;
+
+// ================================================================
+// NEW PREMIUM TOKENS (additions — do not affect existing imports)
+// ================================================================
+
+// ---- Premium Gradients ----
+$gradient-primary: linear-gradient(135deg, #6c63ff 0%, #3b82f6 100%);
+$gradient-secondary: linear-gradient(135deg, #00d4aa 0%, #6c63ff 100%);
+$gradient-hero-dark: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #1a1a2e 100%);
+$gradient-card: linear-gradient(145deg, rgba(108, 99, 255, 0.08), rgba(59, 130, 246, 0.04));
+$gradient-text: linear-gradient(90deg, #6c63ff, #3b82f6, #00d4aa);
+
+// ---- Glass Morphism ----
+$glass-bg-light: rgba(255, 255, 255, 0.72);
+$glass-bg-dark: rgba(13, 17, 23, 0.72);
+$glass-border-light: rgba(108, 99, 255, 0.18);
+$glass-border-dark: rgba(108, 99, 255, 0.28);
+$glass-blur: blur(20px);
+$glass-blur-sm: blur(10px);
+$glass-blur-lg: blur(32px);
+
+// ---- Surface Colors ----
+$surface-dark-1: #0d1117;
+$surface-dark-2: #161b22;
+$surface-dark-3: #21262d;
+$surface-light-1: #ffffff;
+$surface-light-2: #f8f9ff;
+$surface-light-3: #f0eeff;
+
+// ---- Premium Shadows ----
+$shadow-glow: 0 0 40px rgba(108, 99, 255, 0.2);
+$shadow-glow-strong: 0 0 60px rgba(108, 99, 255, 0.35);
+$shadow-card-light: 0 8px 32px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(108, 99, 255, 0.08);
+$shadow-card-dark: 0 8px 32px rgba(0, 0, 0, 0.4), 0 2px 8px rgba(108, 99, 255, 0.15);
+$shadow-card-hover-light: 0 20px 60px rgba(0, 0, 0, 0.1), 0 8px 24px rgba(108, 99, 255, 0.12);
+$shadow-card-hover-dark: 0 20px 60px rgba(0, 0, 0, 0.5), 0 8px 24px rgba(108, 99, 255, 0.25);
+
+// ---- Border Radius ----
+$radius-sm: 8px;
+$radius-md: 16px;
+$radius-lg: 24px;
+$radius-xl: 32px;
+$radius-full: 9999px;
+
+// ---- Transitions ----
+$transition-fast: 0.15s ease;
+$transition-base: 0.3s ease;
+$transition-slow: 0.5s ease;
+$transition-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+// ---- Badge Colors ----
+$badge-frontend: rgba(108, 99, 255, 0.15);
+$badge-backend: rgba(0, 212, 170, 0.15);
+$badge-mobile: rgba(255, 101, 132, 0.15);
+$badge-devops: rgba(59, 130, 246, 0.15);
+
+// ---- SCSS Mixins ----
+@mixin glass-card-light {
+  background: $glass-bg-light;
+  backdrop-filter: $glass-blur;
+  -webkit-backdrop-filter: $glass-blur;
+  border: 1px solid $glass-border-light;
+}
+
+@mixin glass-card-dark {
+  background: $glass-bg-dark;
+  backdrop-filter: $glass-blur;
+  -webkit-backdrop-filter: $glass-blur;
+  border: 1px solid $glass-border-dark;
+}
+
+@mixin gradient-text {
+  background: $gradient-text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@mixin card-hover-lift {
+  transition: transform $transition-base, box-shadow $transition-base;
+  &:hover {
+    transform: translateY(-8px);
+  }
+}
+
+@mixin section-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 0;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

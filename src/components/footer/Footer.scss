@@ -1,0 +1,204 @@
+@import "../../_globalColor";
+
+.footer-section {
+  position: relative;
+  background: #f7f9fc;
+  color: $textColor;
+  margin-top: 50px;
+  padding-bottom: 20px;
+  overflow: hidden;
+
+  .footer-gradient-bar {
+    height: 4px;
+    width: 100%;
+    background: $gradient-primary;
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px 20px;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 60px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  .footer-brand {
+    max-width: 300px;
+
+    .logo-text {
+      font-size: 28px;
+      font-weight: 700;
+      font-family: "Agustina Regular", sans-serif;
+      margin: 0 0 15px 0;
+      color: $textColor;
+
+      .logo-bracket {
+        color: $primary;
+        font-family: "Montserrat", sans-serif;
+      }
+    }
+
+    .footer-desc {
+      color: $subTitle;
+      line-height: 1.6;
+    }
+  }
+
+  .footer-links, .footer-social {
+    h3 {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: $textColor;
+      position: relative;
+      display: inline-block;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 30px;
+        height: 2px;
+        background: $primary;
+        border-radius: 2px;
+      }
+    }
+  }
+
+  .footer-links {
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      li a {
+        color: $subTitle;
+        text-decoration: none;
+        transition: color $transition-fast;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  .footer-social {
+    .social-icons {
+      display: flex;
+      gap: 15px;
+
+      .icon-link {
+        width: 40px;
+        height: 40px;
+        border-radius: $radius-full;
+        background: $glass-bg-light;
+        border: 1px solid $glass-border-light;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $textColor;
+        font-size: 18px;
+        transition: all $transition-fast;
+        text-decoration: none;
+
+        &:hover {
+          background: $primary;
+          color: white;
+          transform: translateY(-3px);
+          box-shadow: $shadow-glow;
+          border-color: $primary;
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+    }
+
+    p {
+      margin: 0;
+      color: $subTitle;
+      font-size: 14px;
+    }
+
+    .back-to-top {
+      width: 45px;
+      height: 45px;
+      border-radius: $radius-full;
+      background: $gradient-primary;
+      color: white;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      cursor: pointer;
+      transition: transform $transition-fast, box-shadow $transition-fast;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: $shadow-glow;
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  &.dark-mode {
+    background: $darkBackground;
+
+    .footer-brand .logo-text {
+      color: $textColorDark;
+    }
+
+    .footer-links h3, .footer-social h3 {
+      color: $textColorDark;
+    }
+
+    .footer-social .social-icons .icon-link {
+      background: $glass-bg-dark;
+      border-color: $glass-border-dark;
+      color: $textColorDark;
+
+      &:hover {
+        background: $primary;
+        color: white;
+        border-color: $primary;
+      }
+    }
+
+    .footer-bottom {
+      border-top-color: rgba(255, 255, 255, 0.1);
+      
+      p {
+        color: $subTitle;
+      }
+    }
+  }
+}

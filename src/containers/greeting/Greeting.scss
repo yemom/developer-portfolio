@@ -1,0 +1,229 @@
+@import "../../_globalColor";
+
+.greeting-section {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  overflow: hidden;
+  position: relative;
+  
+  // Subtle background gradient/pattern
+  background: linear-gradient(180deg, rgba(108, 99, 255, 0.03) 0%, transparent 100%);
+
+  &.dark-mode {
+    background: linear-gradient(180deg, rgba(108, 99, 255, 0.05) 0%, $darkBackground 100%);
+    
+    .status-badge {
+      background: rgba(34, 197, 94, 0.1);
+      border: 1px solid rgba(34, 197, 94, 0.2);
+      .status-text {
+        color: #4ade80;
+      }
+    }
+
+    .greeting-title {
+      color: $textColorDark;
+    }
+
+    .greeting-description {
+      color: $subTitle;
+    }
+
+    .greeting-name {
+      background: $gradient-primary;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+.greeting-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  width: 100%;
+
+  @media (max-width: 992px) {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+  }
+}
+
+.greeting-text-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+
+  @media (max-width: 992px) {
+    align-items: center;
+  }
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background: rgba(34, 197, 94, 0.05);
+  border: 1px solid rgba(34, 197, 94, 0.15);
+  backdrop-filter: blur(4px);
+
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #22c55e;
+    box-shadow: 0 0 8px #22c55e, 0 0 12px #22c55e;
+    animation: pulse-glow 2s infinite;
+  }
+
+  .status-text {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #16a34a;
+    letter-spacing: 0.025em;
+  }
+}
+
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(34, 197, 94, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+  }
+}
+
+.greeting-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  color: $textColor;
+  line-height: 1.2;
+  margin: 0;
+
+  .greeting-name {
+    background: $gradient-primary;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+
+  .wave-emoji {
+    display: inline-block;
+    animation: wave 2.5s infinite;
+    transform-origin: 70% 70%;
+    margin-left: 0.5rem;
+  }
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.greeting-subtitle {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 600;
+  color: $primary;
+  margin: 0;
+  min-height: clamp(2.5rem, 4vw, 3.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  @media (max-width: 992px) {
+    justify-content: center;
+  }
+
+  .typing-text {
+    margin-left: 0.5rem;
+  }
+
+  .cursor {
+    animation: blink 1s step-end infinite;
+    font-weight: 300;
+    margin-left: 2px;
+  }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.greeting-description {
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  line-height: 1.6;
+  color: #4b5563;
+  max-width: 600px;
+  margin: 0;
+
+  @media (max-width: 992px) {
+    max-width: 100%;
+  }
+}
+
+.greeting-socials {
+  margin: 0.5rem 0;
+}
+
+.greeting-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+
+  @media (max-width: 992px) {
+    justify-content: center;
+  }
+  
+  @media (max-width: 480px) {
+    flex-direction: column;
+    width: 100%;
+    
+    > * {
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+    }
+  }
+}
+
+.greeting-image-column {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+
+  img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+  }
+
+  > div {
+    width: 100%;
+  }
+}
