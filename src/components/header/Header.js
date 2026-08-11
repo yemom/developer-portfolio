@@ -158,9 +158,9 @@ function Header() {
 
           {/* ---- Desktop Nav Links ---- */}
           <nav className="navbar__links" aria-label="Desktop navigation">
-            <ul role="list">
+            <ul>
               {navLinks.map(link => (
-                <li key={link.href} role="listitem">
+                <li key={link.href}>
                   <a
                     href={link.href}
                     className={[
@@ -243,7 +243,7 @@ function Header() {
 
               {/* Mobile nav links */}
               <nav aria-label="Mobile navigation">
-                <ul className="navbar__mobile-links" role="list">
+                <ul className="navbar__mobile-links">
                   {navLinks.map((link, i) => (
                     <motion.li
                       key={link.href}
@@ -251,7 +251,6 @@ function Header() {
                       variants={menuItemVariants}
                       initial="hidden"
                       animate="visible"
-                      role="listitem"
                     >
                       <a
                         href={link.href}

@@ -1,11 +1,8 @@
-import React, {useContext} from "react";
+import React from "react";
 import {motion} from "framer-motion";
 import "./EducationCard.scss";
-import StyleContext from "../../contexts/StyleContext";
 
 export default function EducationCard({school}) {
-  const {isDark} = useContext(StyleContext);
-
   const cardVariants = {
     hidden: {opacity: 0, y: 30},
     visible: {
