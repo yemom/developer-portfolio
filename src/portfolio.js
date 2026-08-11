@@ -23,7 +23,7 @@ const greeting = {
 
 const socialMediaLinks = {
   github: "https://github.com/yemom",
-  linkedin: "https://www.linkedin.com/in/esrom-basazinew",
+  linkedin: "https://www.linkedin.com/in/esrom-basazinew-65102a339/",
   gmail: "12yemom@gmail.com",
   display: true
 };
@@ -114,7 +114,7 @@ const educationInfo = {
   schools: [
     {
       schoolName: "Addis Ababa University",
-      logo: require("./assets/images/AAU.wpg.jpg"), // Reusing existing image as a placeholder since Wolkite logo isn't provided
+      logo: require("./assets/images/AAU.wpg.jpg"), 
       subHeader: "Bachelor's Degree in Software Engineering",
       duration: "Academic Background",
       desc: "I have developed a strong foundation in software engineering principles, including software development methodologies, algorithms and data structures, database systems, web and mobile application development, software architecture, and computer programming. Throughout my academic journey, I have gained practical experience designing and developing software solutions, applying problem-solving techniques, and building scalable applications using modern technologies. My studies have strengthened my understanding of both theoretical concepts and real-world software engineering practices.",
@@ -157,7 +157,7 @@ const workExperiences = {
   experience: [
     {
       role: "Software Engineer / Full Stack Developer",
-      company: "Bridge Technology Solution",
+      company: "Freelance",
       companylogo: require("./assets/images/codeInLogo.webp"),
       date: "6+ Months",
       desc: "Developed and maintained modern web applications using React.js, Next.js, TypeScript, and Node.js. Built responsive and scalable user interfaces following modern UI/UX principles. Integrated RESTful APIs and implemented frontend-backend communication. Improved application performance through component optimization and clean architecture. Collaborated with development teams to design, test, and deploy software solutions. Used Git and GitHub for version control and collaborative development. Implemented reusable React components and optimized application structure.",
@@ -167,7 +167,7 @@ const workExperiences = {
     },
     {
       role: "Frontend Developer / Full Stack Developer",
-      company: "Tamcon Software Solution",
+      company: "Studio 21 Architects",
       companylogo: require("./assets/images/saayaHealthLogo.webp"),
       date: "8+ Months",
       desc: "Developed responsive web interfaces and interactive applications. Created reusable UI components and improved user experience. Worked on customer-focused software solutions and technical support. Analyzed user requirements and provided software-based solutions. Collaborated with teams to troubleshoot issues and improve application reliability. Applied modern frontend development practices and clean coding standards.",
@@ -199,7 +199,7 @@ const bigProjects = {
     "Selected work across healthcare, education, architecture, real-time apps, and mobile learning.",
   projects: [
     {
-      image: require("./assets/images/saayaHealthLogo.webp"),
+      image: require("./assets/images/clinic-management.png"),
       projectName: "Clinic Management System",
       projectDesc:
         "Developed a healthcare management platform with separate dashboards for Admin, Doctor, Patient, Pharmacy, and Laboratory. Implemented authentication and authorization using JWT and BCrypt. Built appointment management, medical records, prescriptions, and laboratory workflows. Developed frontend using Next.js + TypeScript and backend using Spring Boot.",
@@ -215,7 +215,7 @@ const bigProjects = {
       liveLink: ""
     },
     {
-      image: require("./assets/images/codeInLogo.webp"),
+      image: require("./assets/images/neuroparent.jpg"),
       projectName: "NeuroParent Mobile Application",
       projectDesc:
         "Developed a mobile application focused on intelligent parenting assistance. Implemented Firebase authentication and cloud data storage. Designed responsive mobile UI following modern mobile UX principles.",
@@ -224,7 +224,7 @@ const bigProjects = {
       liveLink: ""
     },
     {
-      image: require("./assets/images/pwaLogo.webp"),
+      image: require("./assets/images/exam-app.png"),
       projectName: "AAiT School Exam Application",
       projectDesc:
         "Built a mobile exam management application. Implemented user authentication and data management. Created clean and interactive mobile interfaces.",
@@ -233,7 +233,7 @@ const bigProjects = {
       liveLink: ""
     },
     {
-      image: require("./assets/images/nextuLogo.webp"),
+      image: require("./assets/images/studio21.png"),
       projectName: "Studio 21 Architects Website",
       projectDesc:
         "Developed a professional company website. Created responsive pages and modern UI components. Integrated backend services and optimized website performance.",
