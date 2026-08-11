@@ -23,7 +23,7 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (formData.name && formData.email && formData.message) {
-      window.location.href = `mailto:${contactInfo.email_address}?subject=${encodeURIComponent(formData.subject || 'New Contact Request')}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)}`;
+      window.location.href = `mailto:12yemom@gmail.com?subject=${encodeURIComponent(formData.subject || 'New Contact Request')}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)}`;
     }
   };
 
