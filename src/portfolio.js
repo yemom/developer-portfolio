@@ -114,7 +114,7 @@ const educationInfo = {
   schools: [
     {
       schoolName: "Addis Ababa University",
-      logo: require("./assets/images/AAU.wpg.jpg"), 
+      logo: require("./assets/images/AAU.wpg.jpg"),
       subHeader: "Bachelor's Degree in Software Engineering",
       duration: "Academic Background",
       desc: "I have developed a strong foundation in software engineering principles, including software development methodologies, algorithms and data structures, database systems, web and mobile application development, software architecture, and computer programming. Throughout my academic journey, I have gained practical experience designing and developing software solutions, applying problem-solving techniques, and building scalable applications using modern technologies. My studies have strengthened my understanding of both theoretical concepts and real-world software engineering practices.",
@@ -212,7 +212,7 @@ const bigProjects = {
         "REST API"
       ],
       githubLink: "https://github.com/yemom",
-      liveLink: ""
+      liveLink: "https://yemom-hospital.vercel.app/"
     },
     {
       image: require("./assets/images/neuroparent.jpg"),
@@ -221,7 +221,16 @@ const bigProjects = {
         "Developed a mobile application focused on intelligent parenting assistance. Implemented Firebase authentication and cloud data storage. Designed responsive mobile UI following modern mobile UX principles.",
       techStack: ["Flutter", "Dart", "Firebase"],
       githubLink: "https://github.com/yemom",
-      liveLink: ""
+      liveLink: "http://192.168.137.1:5173/client"
+    },
+    {
+      image: require("./assets/images/hotel managment system.jpg"),
+      projectName: "Hotel Reservation System",
+      projectDesc:
+        "Full-stack hotel management system (Spring Boot + React) with guest registration, real-time room search and booking, reservation management, and a full automated test suite including Selenium E2E tests.",
+      techStack: ["Flutter", "Dart", "Firebase"],
+      githubLink: "https://github.com/yemom",
+      liveLink: "https://yemom-hotel.vercel.app/"
     },
     {
       image: require("./assets/images/exam-app.png"),
@@ -239,7 +248,7 @@ const bigProjects = {
         "Developed a professional company website. Created responsive pages and modern UI components. Integrated backend services and optimized website performance.",
       techStack: ["React.js", "Vite", "Node.js", "Express.js"],
       githubLink: "https://github.com/yemom",
-      liveLink: ""
+      liveLink: "https://studio-21-architects.vercel.app/"
     }
   ],
   display: true
