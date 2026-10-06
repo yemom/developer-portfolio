@@ -212,7 +212,7 @@ const bigProjects = {
         "REST API"
       ],
       githubLink: "https://github.com/yemom",
-      liveLink: "https://yemom-hospital.vercel.app/"
+      liveLink: "https://ent-project-ten.vercel.app/"
     },
     {
       image: require("./assets/images/neuroparent.jpg"),
@@ -221,7 +221,7 @@ const bigProjects = {
         "Developed a mobile application focused on intelligent parenting assistance. Implemented Firebase authentication and cloud data storage. Designed responsive mobile UI following modern mobile UX principles.",
       techStack: ["Flutter", "Dart", "Firebase"],
       githubLink: "https://github.com/yemom",
-      liveLink: "http://192.168.137.1:5173/client"
+      liveLink: "#"
     },
     {
       image: require("./assets/images/hotel managment system.jpg"),
@@ -249,6 +249,15 @@ const bigProjects = {
       techStack: ["React.js", "Vite", "Node.js", "Express.js"],
       githubLink: "https://github.com/yemom",
       liveLink: "https://studio-21-architects.vercel.app/"
+    },
+    {
+      image: require("./assets/images/inventory.jpg"),
+      projectName: "Inventory system",
+      projectDesc:
+        "A full-stack inventory management system for businesses, featuring product and stock management, suppliers, customers, role-based authentication, inventory analytics, and a POS interface. Built with Spring Boot, Next.js, PostgreSQL, and Docker.",
+      techStack: ["React.js", "Vite", "Node.js", "Express.js"],
+      githubLink: "https://github.com/yemom",
+      liveLink: "https://inventory-system-blush-mu.vercel.app/"
     }
   ],
   display: true
