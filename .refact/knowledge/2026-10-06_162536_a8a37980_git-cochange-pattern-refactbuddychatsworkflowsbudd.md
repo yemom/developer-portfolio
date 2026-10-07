@@ -6,7 +6,7 @@ tags:
 - git
 - pattern
 created: 2026-10-06
-updated: 2026-10-06
+updated: 2026-10-07
 filenames:
 - .refact/buddy/chats/workflows/buddy_daily_digest.json
 - .refact/buddy/chats/workflows/buddy_idle_suggester.json
@@ -15,7 +15,7 @@ kind: pattern
 status: proposed
 superseded_by: null
 deprecated_at: null
-review_after: 2026-10-06
+review_after: 2026-10-07
 source_chat_id: null
 created_at: 2026-10-06T13:25:36.453589300+00:00
 summary: null
@@ -36,7 +36,8 @@ last_injected_at: null
 dismissed_count: 0
 source_content_hash: 0790e7235d9a8402c5dc95970ec04eee6063eba12c7af3f4ce0466652bb195dc
 review_needed: true
-occurrences: 0
+occurrences: 2
+last_observed: 2026-10-06T13:45:51.046384800+00:00
 ---
 
 Git co-change pattern: .refact/buddy/chats/workflows/buddy_daily_digest.json + .refact/buddy/chats/workflows/buddy_idle_suggester.json

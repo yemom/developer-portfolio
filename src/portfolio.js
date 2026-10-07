@@ -257,7 +257,7 @@ const bigProjects = {
         "A full-stack inventory management system for businesses, featuring product and stock management, suppliers, customers, role-based authentication, inventory analytics, and a POS interface. Built with Spring Boot, Next.js, PostgreSQL, and Docker.",
       techStack: ["React.js", "Vite", "Node.js", "Express.js"],
       githubLink: "https://github.com/yemom",
-      liveLink: "https://inventory-system-blush-mu.vercel.app/"
+      liveLink: "https://yemom-inventory-system.vercel.app/"
     }
   ],
   display: true
